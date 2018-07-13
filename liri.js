@@ -70,7 +70,18 @@ switch (command) {
       // If the code experiences any errors it will log the error to the console.
       if (error) {
         return console.log(error);
-      }    
+      }   
+      var dataArr = data.split(",");
+      var title = dataArr[1]
+;      spotify.search({ type: 'track', query: title, limit:1 }, function(err, data) {
+        if (err) {
+          return console.log('Error occurred: ' + err);
+        }
+                 
+      var responseSong = JSON.stringify(data, null, 2)
+      console.log(responseSong);
+            
+      });
       // We will then print the contents of data
       console.log(data);    
       // Then split it by commas (to make it more readable)
@@ -78,8 +89,7 @@ switch (command) {
       // We will then re-display the content as an array for later use.
       console.log(dataArr[1]);});
       
-      // ss.spotifythis("I want it that way");
-            // fs read random.txt
+      
       break  
     default: 
     //  console.log("you entered and invalid command");
