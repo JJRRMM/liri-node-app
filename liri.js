@@ -17,7 +17,7 @@ switch (command) {
     case "my-tweets": 
     // show 20 tweets and when they were created
     // client.search({})  
-    var params = {screen_name: 'j_r_m9'};  
+    var params = {screen_name: 'jm02776256'};  
     client.get( 'statuses/user_timeline', params , function (err,data,response) {
     if (err) {
       return console.log('Error occurred: ' + err);
@@ -30,17 +30,11 @@ switch (command) {
     spotify.search({ type: 'track', query: title, limit:1 }, function(err, data) {
       if (err) {
         return console.log('Error occurred: ' + err);
-      }
-      // var responseSong = JSON.parse(data);
-      // console.log(responseSong);
+      }     
     // console.log(data); 
     var responseSong = JSON.stringify(data, null, 2)
     console.log(responseSong);
-    // console.log(JSON.parse(data).artists)
-    // var jsonData = JSON.parse(data)[0].tracks;
-    // var artists = jsonData.artists
-    // console.log(JSON.stringify(data, null, 2));
-    // console.log(JSON.parse(data));
+    // console.log(JSON.parse(data).artists)    
     });
       // this will show artistm songs name, preview link, and album no song ace of base the sign
       
@@ -87,12 +81,10 @@ switch (command) {
       // Then split it by commas (to make it more readable)
       var dataArr = data.split(",");    
       // We will then re-display the content as an array for later use.
-      console.log(dataArr[1]);});
-      
-      
+      console.log(dataArr[1]);});            
       break  
     default: 
-    //  console.log("you entered and invalid command");
+     console.log("you entered an invalid command");
     //    break  
     };
     
