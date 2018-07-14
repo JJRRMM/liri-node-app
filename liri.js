@@ -27,12 +27,11 @@ switch (command) {
   });
       break
     case "spotify-this-song":
-    console.log(title.length)
+    
     if (title.length < 1) {
       var title = "The sign Ace of Base"
-      console.log("I am in the if condition now:")}
-      console.log(" the title of the songs is: " + title);
-    spotify.search({ type: 'track', query: title, limit:1 }, function(err, data) {
+      }
+     spotify.search({ type: 'track', query: title, limit:1 }, function(err, data) {
       if (err) {
         return console.log('Error occurred: ' + err);
       }      
@@ -47,6 +46,9 @@ switch (command) {
       
       break
     case "movie-this": 
+    if(title.length <1){
+      var title = "Mr. Nobody"; 
+    }
     request("http://www.omdbapi.com/?t=" + title + "&y=&plot=short&apikey=trilogy",
      function(error, response, body) {
   // If the request is successful (i.e. if the response status code is 200)
