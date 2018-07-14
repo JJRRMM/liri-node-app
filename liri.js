@@ -27,11 +27,16 @@ switch (command) {
   });
       break
     case "spotify-this-song":
+    console.log(title.length)
+    if (title.length < 1) {
+      var title = "The sign Ace of Base"
+      console.log("I am in the if condition now:")}
+      console.log(" the title of the songs is: " + title);
     spotify.search({ type: 'track', query: title, limit:1 }, function(err, data) {
       if (err) {
         return console.log('Error occurred: ' + err);
-      }     
-    // console.log(data); 
+      }      
+           
     console.log("Artists: " + data.tracks.items[0].artists[0].name);
     console.log("Songs Name: " + title);
     console.log("Preiew link on Spotify: " + data.tracks.items[0].artists[0].href);
