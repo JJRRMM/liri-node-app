@@ -32,8 +32,10 @@ switch (command) {
         return console.log('Error occurred: ' + err);
       }     
     // console.log(data); 
-    var responseSong = JSON.stringify(data, null, 2)
-    console.log(responseSong);
+    console.log("Artists: " + data.tracks.items[0].artists[0].name);
+    console.log("Songs Name: " + title);
+    console.log("Preiew link on Spotify: " + data.tracks.items[0].artists[0].href);
+    console.log("Album: " + data.tracks.items[0].name );
     // console.log(JSON.parse(data).artists)    
     });
       // this will show artistm songs name, preview link, and album no song ace of base the sign
