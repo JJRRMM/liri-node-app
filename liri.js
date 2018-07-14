@@ -24,7 +24,7 @@ switch (command) {
     }
 
       console.log("My tweets");
-      for (i=0; i<9; i++) {
+      for (i=0; i<20; i++) {
         console.log(data[i].created_at);
         console.log(data[i].text)}
   });
