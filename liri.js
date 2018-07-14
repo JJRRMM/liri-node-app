@@ -24,8 +24,9 @@ switch (command) {
     }
 
       console.log("My tweets");
-      console.log(data[0].created_at);
-      console.log(data[0].text)
+      for (i=0; i<9; i++) {
+        console.log(data[i].created_at);
+        console.log(data[i].text)}
   });
       break
     case "spotify-this-song":
