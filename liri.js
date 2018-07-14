@@ -22,8 +22,10 @@ switch (command) {
     if (err) {
       return console.log('Error occurred: ' + err);
     }
+
       console.log("My tweets");
-      console.log(data);
+      console.log(data[0].created_at);
+      console.log(data[0].text)
   });
       break
     case "spotify-this-song":
