@@ -61,7 +61,7 @@ switch (command) {
     console.log("Title of the movie: " + JSON.parse(body).Title);
     console.log("Year the movie came out: " + JSON.parse(body).Year);
     console.log("IMD rating of the movie " + JSON.parse(body).imdbRating);
-    console.log("Rotten Tomatoes rating of the movie " + JSON.parse(body).Ratings[2]);
+    console.log("Rotten Tomatoes rating of the movie " + JSON.parse(body).Ratings[1].Value);
     console.log("Country where the movie was produced " + JSON.parse(body).Country);
     console.log("Language of the movie " + JSON.parse(body).Language);
     console.log("Plot of the movie " + JSON.parse(body).Plot);
