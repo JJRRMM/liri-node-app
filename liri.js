@@ -74,8 +74,10 @@ switch (command) {
           return console.log('Error occurred: ' + err);
         }
                  
-      var responseSong = JSON.stringify(data, null, 2)
-      console.log(responseSong);
+        console.log("Artists: " + data.tracks.items[0].artists[0].name);
+        console.log("Songs Name: " + title);
+        console.log("Preiew link on Spotify: " + data.tracks.items[0].artists[0].href);
+        console.log("Album: " + data.tracks.items[0].name );
             
       });
       // We will then print the contents of data
